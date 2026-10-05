@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto G1 - Análise e Visualização de Dados da Dengue no Brasil</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- HERO HEADER -->
+    <header class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white py-16 px-6 shadow-xl">
+        <div class="max-w-6xl mx-auto text-center">
+            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 border border-blue-400/30">
+                Projeto Acadêmico G1
+            </span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                Análise e Visualização de Dados Epidemiológicos da Dengue no Brasil
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
+                Estudo analítico relacional, engenharia de atributos e dashboard interativo para monitoramento de sazonalidade, fatores climáticos e taxa de hospitalização.
+            </p>
+
+            <!-- METADADOS ACADÊMICOS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-sm">
+                <div class="flex items-center justify-center space-x-2">
+                    <span class="text-blue-400 font-bold">👤 Aluno:</span>
+                    <span class="text-slate-100 font-medium">Alexandre Souza de Abreu Junior</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <span class="text-blue-400 font-bold">👨‍🏫 Professor:</span>
+                    <span class="text-slate-100 font-medium">Alexandre Neves Louzada</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <span class="text-blue-400 font-bold">📚 Disciplina:</span>
+                    <span class="text-slate-100 font-medium">Linguagens de Programação</span>
+                </div>
+            </div>
+
+            <!-- ACTION BUTTONS HERO -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="https://streamlit.io/" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl shadow-lg transition duration-200 flex items-center space-x-2">
+                    <span>🚀 Acessar Streamlit App</span>
+                </a>
+                <a href="https://github.com/" target="_blank" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-100 font-semibold rounded-xl border border-slate-700 shadow-lg transition duration-200 flex items-center space-x-2">
+                    <span>📁 Repositório no GitHub</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CARDS DE VISÃO GERAL (NUMEROS GERAIS) -->
+    <section class="max-w-6xl mx-auto -mt-8 px-6 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 text-center">
+                <div class="text-3xl font-extrabold text-blue-600 mb-1">4.440</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Registros Analisados</div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 text-center">
+                <div class="text-3xl font-extrabold text-indigo-600 mb-1">2015 - 2024</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Período Temporal (10 Anos)</div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 text-center">
+                <div class="text-3xl font-extrabold text-emerald-600 mb-1">3.560.562</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Casos Notificados</div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 text-center">
+                <div class="text-3xl font-extrabold text-rose-600 mb-1">178.670</div>
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Internações Hospitalares</div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- SEÇÃO: TECNOLOGIAS E ARQUITETURA -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900">Tecnologias & Arquitetura da Solução</h2>
+                <p class="text-slate-600 mt-2">Pipeline de engenharia de dados e plataforma de inteligência epidemiológica.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- CARD 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl mb-4">
+                        💾
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Ingestão & Banco de Dados</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Processamento ETL em Python utilizando Pandas e SQLAlchemy para modelagem relacional dos dados no SQLite (<code>database/dengue_brasil.db</code>).
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Python 3</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">SQLAlchemy</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">SQLite</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Pandas</span>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-xl mb-4">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Análise & Visualização</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Visualizações interativas e diagnóstico estatístico via Plotly Express, Matplotlib e Seaborn integrados em Jupyter Notebooks.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Plotly</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Seaborn</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Matplotlib</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Jupyter</span>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-bold text-xl mb-4">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Dashboard Interativo</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Interface Web reativa construída com Streamlit, apresentando filtros multi-nível (anos, região, UF, nível de alerta) e KPIs dinâmicos.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Streamlit</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Streamlit Cloud</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">GitHub Pages</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: DESCOBERTAS ANALÍTICAS -->
+        <section class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+                <span class="mr-3">💡</span> Principais Descobertas Epidemiológicas
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-bold text-slate-900 mb-2">1. Sazonalidade nos Meses Chuvosos e Quentes</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        A análise temporal revelou um pico contínuo de casos entre os meses de <strong>Janeiro e Maio</strong>. As precipitações pluviais elevadas somadas às altas temperaturas aumentam os criadouros do vetor <em>Aedes aegypti</em>.
+                    </p>
+                </div>
+
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-bold text-slate-900 mb-2">2. Correlação Climática Significativa</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        A matriz de correlação de Pearson confirma a associação positiva entre o volume de chuvas (<code>chuva_mm</code>) e o acréscimo direto nas internações hospitalares e casos de contágio.
+                    </p>
+                </div>
+
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-bold text-slate-900 mb-2">3. Impacto Hospitalar e Letalidade</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        A taxa de internação hospitalar aproximou-se de <strong>5,02%</strong> dos casos notificados, enquanto a taxa de letalidade geral estabilizou em <strong>0,1492%</strong> (5.314 óbitos em 3,56 milhões de casos).
+                    </p>
+                </div>
+
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-bold text-slate-900 mb-2">4. Alocação Preditiva de Recursos</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Grandes centros urbanos concentram os maiores volumes absolutos de casos, ressaltando a necessidade de direcionamento antecipado de equipes de saúde nos primeiros trimestres do ano.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION FINAL -->
+        <section class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-10 text-white text-center shadow-xl">
+            <h2 class="text-3xl font-extrabold mb-3">Explore a Aplicação Completa</h2>
+            <p class="text-blue-100 max-w-2xl mx-auto mb-6 text-sm font-light">
+                Interaja com os filtros, explore séries temporais e baixe relatórios diretamente no Dashboard do Streamlit.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://streamlit.io/" target="_blank" class="px-8 py-3.5 bg-white text-blue-700 font-bold rounded-xl shadow-md hover:bg-slate-100 transition">
+                    Abrir Dashboard Interativo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ INSTITUCIONAL -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs">
+        <div class="max-w-6xl mx-auto px-6 text-center space-y-3">
+            <p class="font-medium text-slate-300">
+                Projeto Acadêmico - Disciplina de Linguagens de Programação
+            </p>
+            <p>
+                <strong>Professor Orientador:</strong> Alexandre Neves Louzada &nbsp;|&nbsp; 
+                <strong>Aluno Desenvolvedor:</strong> Alexandre Souza de Abreu Junior
+            </p>
+            <p class="text-slate-500 pt-2">
+                © 2024 / 2025 - projeto-g1. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
