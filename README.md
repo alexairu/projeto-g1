@@ -14,7 +14,7 @@ Este repositório contém a solução completa do **Projeto G1** para a discipli
 
 - 🚀 **Streamlit Community Cloud (App Interativo):** [https://streamlit.io/](https://streamlit.io/) *(Link de demonstração)*
 - 🌐 **GitHub Pages (Landing Page): https://github.com/alexairu/projeto-g1
-- 📁 **Repositório GitHub:** [https://github.com/alexandrelouzada/projeto-g1](https://github.com/alexandrelouzada/projeto-g1)
+- 📁 **Repositório GitHub: https://github.com/AlexandreLouzada/Dados-Simulados-G1
 
 ---
 
